@@ -6,7 +6,7 @@ class test_teacher(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         self.person=Person('Maedeh','Asgari')
-        self.student=Student('Zahra','Ahamadi',19)
+        self.student=Student('Zahra','Ahmadi',19)
         self.teacher=Teacher('Ali','Miri')
     
     @classmethod
@@ -17,16 +17,15 @@ class test_teacher(unittest.TestCase):
 
     def test_person_str(self):
         result=str(self.person)
-        self.assertIn('Person',result)
+        self.assertEqual('Person: Maedeh Asgari',result)
 
     def test_student_str(self):
         result=str(self.student)
-        self.assertIn('Student',result)
+        self.assertEqual('Student: Zahra Ahmadi',result)
 
     def test_teacher_str(self):
         result=str(self.teacher)
-        self.assertIn('Teacher',result)
+        self.assertEqual('Teacher: Ali Miri',result)
 
 if __name__=='__main__':
     unittest.main()
-    
