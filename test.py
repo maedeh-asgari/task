@@ -1,31 +1,35 @@
 import unittest
-from task import Person,Student,Teacher
+from task import Person, Student, Teacher
 
-class test_teacher(unittest.TestCase):
 
+class TaskTest(unittest.TestCase):
     @classmethod
-    def setUpClass(self):
-        self.person=Person('Maedeh','Asgari')
-        self.student=Student('Zahra','Ahmadi',19)
-        self.teacher=Teacher('Ali','Miri')
+    def setUpClass(cls):
+        cls.person = Person('Maedeh', 'Asgari')
+        cls.student = Student('Zahra', 'Ahmadi', 19)
+        cls.teacher = Teacher('Ali', 'Miri', 2)
     
     @classmethod
-    def tearDownClass(self):
-        del self.person
-        del self.student
-        del self.teacher
+    def tearDownClass(cls):
+        del cls.person
+        del cls.student
+        del cls.teacher
 
     def test_person_str(self):
-        result=str(self.person)
-        self.assertEqual('Person: Maedeh Asgari',result)
+        result = str(self.person)
+        print(result)
+        self.assertEqual('Person: Maedeh Asgari', result)
 
     def test_student_str(self):
-        result=str(self.student)
-        self.assertEqual('Student: Zahra Ahmadi',result)
+        result = str(self.student)
+        print(result)
+        self.assertEqual('Student: Zahra Ahmadi', result)
 
     def test_teacher_str(self):
-        result=str(self.teacher)
-        self.assertEqual('Teacher: Ali Miri',result)
+        result = str(self.teacher)
+        print(result)
+        self.assertEqual('Teacher: Ali Miri', result)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     unittest.main()
