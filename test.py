@@ -17,17 +17,14 @@ class TaskTest(unittest.TestCase):
 
     def test_person_str(self):
         result = str(self.person)
-        print(result)
         self.assertEqual('Person: Maedeh Asgari', result)
 
     def test_student_str(self):
         result = str(self.student)
-        print(result)
         self.assertEqual('Student: Zahra Ahmadi', result)
 
     def test_teacher_str(self):
         result = str(self.teacher)
-        print(result)
         self.assertEqual('Teacher: Ali Miri', result)
 
 
