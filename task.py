@@ -49,10 +49,3 @@ class Maker:
             return Student(*self.args, **self.kwargs)
         elif self.prefix == 'tch':
             return Teacher(*self.args, **self.kwargs)
-
-
-s = Maker(prefix='stu', name='Maedeh', lastname='Asgari', score=20)
-t = Maker(prefix='tch', name='Maral', lastname='Asadi', level=1)
-
-print(s.create_instance())
-print(t.create_instance())
